@@ -8,6 +8,11 @@ class FizzBuzzWoofTests {
         fizzBuzzWoof(3) shouldEqual "Fizz"
         fizzBuzzWoof(4) shouldEqual "4"
         fizzBuzzWoof(5) shouldEqual "Buzz"
+        fizzBuzzWoof(6) shouldEqual "Fizz"
+        fizzBuzzWoof(7) shouldEqual "7"
+        fizzBuzzWoof(8) shouldEqual "8"
+        fizzBuzzWoof(9) shouldEqual "Fizz"
+        fizzBuzzWoof(10) shouldEqual "Buzz"
     }
 }
 
