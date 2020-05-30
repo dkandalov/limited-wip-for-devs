@@ -28,6 +28,6 @@ fun fizzBuzzWoof(n: Int) =
         buzz(n)            -> "Buzz"
         woof(n)            -> "Woof"
         else               -> n.toString()
-    }
+    }.ifEmpty { n.toString() }
 
 
