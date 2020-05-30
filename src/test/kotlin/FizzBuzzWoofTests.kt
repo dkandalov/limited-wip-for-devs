@@ -24,13 +24,7 @@ fun woof(n: Int) = n.rem(7) == 0
 fun fizzBuzzWoof(n: Int) = (
     (if (fizz(n)) "Fizz" else "") +
     (if (buzz(n)) "Buzz" else "") +
-        when {
-            fizz(n) && buzz(n) -> ""
-            fizz(n)            -> ""
-            buzz(n)            -> ""
-            woof(n)            -> "Woof"
-            else               -> n.toString()
-        }
-    ).ifEmpty { n.toString() }
+    (if (woof(n)) "Woof" else "")
+).ifEmpty { n.toString() }
 
 
