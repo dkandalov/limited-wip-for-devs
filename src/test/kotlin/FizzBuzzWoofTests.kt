@@ -21,15 +21,16 @@ class FizzBuzzWoofTests {
 }
 
 fun fizz(n: Int) = if (n.rem(3) == 0) "Fizz" else ""
+fun buzz(n: Int) = if (n.rem(5) == 0) "Buzz" else ""
 
 fun fizzBuzzWoof(n: Int): String {
-    return fizz(n) + when {
-        n.rem(3) == 0 && n.rem(5) == 0 && n.rem(7) == 0 -> "BuzzWoof"
+    return fizz(n) + buzz(n) + when {
+        n.rem(3) == 0 && n.rem(5) == 0 && n.rem(7) == 0 -> "Woof"
         n.rem(3) == 0 && n.rem(7) == 0                  -> "Woof"
-        n.rem(5) == 0 && n.rem(7) == 0                  -> "BuzzWoof"
-        n.rem(3) == 0 && n.rem(5) == 0                  -> "Buzz"
+        n.rem(5) == 0 && n.rem(7) == 0                  -> "Woof"
+        n.rem(3) == 0 && n.rem(5) == 0                  -> ""
         n.rem(3) == 0                                   -> ""
-        n.rem(5) == 0                                   -> "Buzz"
+        n.rem(5) == 0                                   -> ""
         n.rem(7) == 0                                   -> "Woof"
         else                                            -> n.toString()
     }
