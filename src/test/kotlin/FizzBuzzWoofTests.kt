@@ -12,12 +12,12 @@ class FizzBuzzWoofTests {
         fizzBuzzWoof(7) shouldEqual "7"
         fizzBuzzWoof(8) shouldEqual "8"
         fizzBuzzWoof(9) shouldEqual "Fizz"
-        //fizzBuzzWoof(10) shouldEqual "10"
+        fizzBuzzWoof(10) shouldEqual "Buzz"
     }
 }
 
 fun fizzBuzzWoof(n: Int): String {
     if (n.rem(3) == 0) return "Fizz"
-    if (n == 5) return "Buzz"
+    if (n.rem(5) == 0) return "Buzz"
     return n.toString()
 }
