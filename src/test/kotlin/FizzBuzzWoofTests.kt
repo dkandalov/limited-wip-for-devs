@@ -24,10 +24,11 @@ fun woof(n: Int) = n.rem(7) == 0
 fun fizzBuzzWoof(n: Int): String {
     return (
         (if (fizz(n)) "Fizz" else "") +
+        (if (buzz(n)) "Buzz" else "") +
             when {
-                fizz(n) && buzz(n) -> "Buzz"
+                fizz(n) && buzz(n) -> ""
                 fizz(n) -> ""
-                buzz(n) -> "Buzz"
+                buzz(n) -> ""
                 woof(n) -> "Woof"
                 else -> ""
             }
