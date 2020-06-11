@@ -18,17 +18,19 @@ class FizzBuzzWoofTests {
     }
 }
 
+fun fizz(n: Int) = n.rem(3) == 0
+fun buzz(n: Int) = n.rem(5) == 0
+fun woof(n: Int) = n.rem(7) == 0
+
 fun fizzBuzzWoof(n: Int): String {
     return when {
-        fizz(n) && n.rem(5) == 0 -> "FizzBuzz"
-        fizz(n)                  -> "Fizz"
-        n.rem(5) == 0            -> "Buzz"
-        n.rem(7) == 0                  -> "Woof"
-        else                           -> n.toString()
+        fizz(n) && buzz(n) -> "FizzBuzz"
+        fizz(n)       -> "Fizz"
+        buzz(n) -> "Buzz"
+        woof(n) -> "Woof"
+        else    -> n.toString()
     }
 }
-
-private fun fizz(n: Int) = n.rem(3) == 0
 
 
 
