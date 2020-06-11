@@ -25,14 +25,7 @@ fun fizzBuzzWoof(n: Int): String {
     return (
         (if (fizz(n)) "Fizz" else "") +
         (if (buzz(n)) "Buzz" else "") +
-        (if (woof(n)) "Woof" else "") +
-            when {
-                fizz(n) && buzz(n) -> ""
-                fizz(n) -> ""
-                buzz(n) -> ""
-                woof(n) -> ""
-                else -> ""
-            }
+        (if (woof(n)) "Woof" else "")
         ).ifEmpty { n.toString() }
 }
 
