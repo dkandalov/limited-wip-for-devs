@@ -1,4 +1,3 @@
-
 import datsok.shouldEqual
 import org.junit.jupiter.api.Test
 
@@ -25,11 +24,11 @@ fun woof(n: Int) = n.rem(7) == 0
 fun fizzBuzzWoof(n: Int): String {
     return when {
         fizz(n) && buzz(n) -> "FizzBuzz"
-        fizz(n)       -> "Fizz"
+        fizz(n) -> "Fizz"
         buzz(n) -> "Buzz"
         woof(n) -> "Woof"
-        else    -> n.toString()
-    }
+        else -> n.toString()
+    }.ifEmpty { n.toString() }
 }
 
 
