@@ -19,11 +19,13 @@ class FizzBuzzWoofTests {
 }
 
 fun fizzBuzzWoof(n: Int): String {
-    if (n.rem(3) == 0 && n.rem(5) == 0) return "FizzBuzz"
-    if (n.rem(3) == 0) return "Fizz"
-    if (n.rem(5) == 0) return "Buzz"
-    if (n.rem(7) == 0) return "Woof"
-    return n.toString()
+    return when {
+        n.rem(3) == 0 && n.rem(5) == 0 -> "FizzBuzz"
+        n.rem(3) == 0                  -> "Fizz"
+        n.rem(5) == 0                  -> "Buzz"
+        n.rem(7) == 0                  -> "Woof"
+        else                           -> n.toString()
+    }
 }
 
 
