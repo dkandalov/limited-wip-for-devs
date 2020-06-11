@@ -22,7 +22,7 @@ fun buzz(n: Int) = n.rem(5) == 0
 fun woof(n: Int) = n.rem(7) == 0
 
 fun fizzBuzzWoof(n: Int): String {
-    return when {
+    return ("") + when {
         fizz(n) && buzz(n) -> "FizzBuzz"
         fizz(n) -> "Fizz"
         buzz(n) -> "Buzz"
