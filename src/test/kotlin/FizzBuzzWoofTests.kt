@@ -26,12 +26,12 @@ fun buzz(n: Int) = if (n.rem(5) == 0) "Buzz" else ""
 fun woof(n: Int) = if (n.rem(7) == 0) "Woof" else ""
 
 fun fizzBuzzWoof(n: Int): String {
-    return when {
-        n.rem(3) == 0 && n.rem(5) == 0 && n.rem(7) == 0 -> "FizzBuzzWoof"
+    return fizz(n) + when {
+        n.rem(3) == 0 && n.rem(5) == 0 && n.rem(7) == 0 -> "BuzzWoof"
         n.rem(5) == 0 && n.rem(7) == 0                  -> "BuzzWoof"
-        n.rem(3) == 0 && n.rem(7) == 0                  -> "FizzWoof"
-        n.rem(3) == 0 && n.rem(5) == 0                  -> "FizzBuzz"
-        n.rem(3) == 0                                   -> "Fizz"
+        n.rem(3) == 0 && n.rem(7) == 0                  -> "Woof"
+        n.rem(3) == 0 && n.rem(5) == 0                  -> "Buzz"
+        n.rem(3) == 0                                   -> ""
         n.rem(5) == 0                                   -> "Buzz"
         n.rem(7) == 0                                   -> "Woof"
         else                                            -> n.toString()
