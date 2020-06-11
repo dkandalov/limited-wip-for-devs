@@ -15,10 +15,16 @@ class FizzBuzzWoofTests {
          fizzBuzzWoof(10) shouldEqual "Buzz"
          fizzBuzzWoof(14) shouldEqual "Woof"
          fizzBuzzWoof(3 * 5) shouldEqual "FizzBuzz"
+         fizzBuzzWoof(3 * 7) shouldEqual "FizzWoof"
+         fizzBuzzWoof(5 * 7) shouldEqual "BuzzWoof"
+         fizzBuzzWoof(3 * 5 * 7) shouldEqual "FizzBuzzWoof"
     }
 }
 
 fun fizzBuzzWoof(n: Int): String {
+    if (n.rem(3) == 0 && n.rem(5) == 0 && n.rem(7) == 0) return "FizzBuzzWoof"
+    if (n.rem(5) == 0 && n.rem(7) == 0) return "BuzzWoof"
+    if (n.rem(3) == 0 && n.rem(7) == 0) return "FizzWoof"
     if (n.rem(3) == 0 && n.rem(5) == 0) return "FizzBuzz"
     if (n.rem(3) == 0) return "Fizz"
     if (n.rem(5) == 0) return "Buzz"
