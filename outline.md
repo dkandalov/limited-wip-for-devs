@@ -1,0 +1,34 @@
+Watchdog and auto-revert:
+ - watchdog and auto-revert plugin demo
+ - 1
+ - 2, 3 (Fizz)
+ - 4, 5 (Buzz), 6 (commented out to commit)
+ - 6, 7, 8, 9, 10, 15 auto-revert
+ - 6 (Fizz rem)
+ - 7, 8, 9 (Fizz)
+ - 10 (Buzz), 15 (FizzBuzz with mangled commit message to be quick)
+ - 7, 14 (Woof)
+ - Woof combinations
+ - refactoring "if/else as expression"
+ - refactoring "lift return"
+ - refactoring "convert to when"
+ - add "fizz()/buzz()/woof()"
+ - refactoring "fizz()"
+ - refactoring "buzz()"
+ - refactoring "woof()"
+ 
+TCR:
+ - demo: no commit, commit on tests, revert on failing test
+ - 1
+ - 2
+ - 3 (Fizz, shouldNotEqual)
+ - 4, 5 (Buzz)
+ - 6-10
+ - FizzBuzz
+ - 7 Woof
+ - refactoring "if/else as expression", "lift return", "convert to when"
+ - refactoring extract fizz(), buzz(), woof()
+ - failed refactoring fizz(n)
+ - micro-steps to refactor
+ - add FizzBuzzWoof test (because TCR is not compatible with TDD)
+ - run test coverage
