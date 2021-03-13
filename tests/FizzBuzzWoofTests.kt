@@ -23,14 +23,14 @@ class FizzBuzzWoofTests {
 }
 
 fun fizzBuzzWoof(n: Int): String {
-    if (n.rem(3) == 0 && n.rem(5) == 0 && n.rem(7) == 0) return "FizzBuzzWoof"
-    if (n.rem(3) == 0 && n.rem(7) == 0) return "FizzWoof"
-    if (n.rem(5) == 0 && n.rem(7) == 0) return "BuzzWoof"
-    if (n.rem(3) == 0 && n.rem(5) == 0) return "FizzBuzz"
-    if (n.rem(3) == 0) return "Fizz"
-    if (n.rem(5) == 0) return "Buzz"
-    if (n.rem(7) == 0) return "Woof"
-    return n.toString()
+    return if (n.rem(3) == 0 && n.rem(5) == 0 && n.rem(7) == 0) "FizzBuzzWoof"
+    else if (n.rem(3) == 0 && n.rem(7) == 0) "FizzWoof"
+    else if (n.rem(5) == 0 && n.rem(7) == 0) "BuzzWoof"
+    else if (n.rem(3) == 0 && n.rem(5) == 0) "FizzBuzz"
+    else if (n.rem(3) == 0) "Fizz"
+    else if (n.rem(5) == 0) "Buzz"
+    else if (n.rem(7) == 0) "Woof"
+    else n.toString()
 }
 
 
