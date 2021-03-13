@@ -17,6 +17,8 @@ class FizzBuzzWoofTests {
         fizzBuzzWoof(11) shouldEqual "11"
         fizzBuzzWoof(14) shouldEqual "Woof"
         fizzBuzzWoof(15) shouldEqual "FizzBuzz"
+        fizzBuzzWoof(3 * 7) shouldEqual "FizzWoof"
+        fizzBuzzWoof(5 * 7) shouldEqual "BuzzWoof"
     }
 }
 
