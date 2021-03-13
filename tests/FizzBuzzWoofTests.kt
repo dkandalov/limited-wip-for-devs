@@ -28,14 +28,14 @@ fun fizz(n: Int) = n.rem(3) == 0
 
 fun fizzBuzzWoof(n: Int): String {
     return (if (fizz(n)) "Fizz" else "") +
-        (if (buzz(n)) "" else "") +
+        (if (buzz(n)) "Buzz" else "") +
         when {
-            fizz(n) && buzz(n) && woof(n) -> "BuzzWoof"
-            buzz(n) && woof(n)            -> "BuzzWoof"
-            fizz(n) && buzz(n)            -> "Buzz"
+            fizz(n) && buzz(n) && woof(n) -> "Woof"
+            buzz(n) && woof(n)            -> "Woof"
+            fizz(n) && buzz(n)            -> ""
             fizz(n) && woof(n)            -> "Woof"
             fizz(n)                       -> ""
-            buzz(n)                       -> "Buzz"
+            buzz(n)                       -> ""
             woof(n)                       -> "Woof"
             else                          -> n.toString()
         }
