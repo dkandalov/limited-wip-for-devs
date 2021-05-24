@@ -1,4 +1,4 @@
-This repository contains source code and links for the "Limited WIP for Developers" talk.
+This repository contains source code and links for the [Limited WIP for Developers](https://www.youtube.com/watch?v=AWbgen9x6xs) talk.
 
 - [Kanban](https://en.wikipedia.org/wiki/Kanban)
 - [The Goal book](https://en.wikipedia.org/wiki/The_Goal_%28novel%29)
