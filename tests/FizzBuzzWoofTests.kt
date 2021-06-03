@@ -20,27 +20,23 @@ class FizzBuzzWoofTests {
         fizzBuzzWoof(5 * 7) shouldEqual "BuzzWoof"
         fizzBuzzWoof(3 * 5 * 7) shouldEqual "FizzBuzzWoof"
     }
-
-    private fun fizzBuzzWoof(n: Int): String =
-        when {
-            fizz(n) && buzz(n) && woof(n) -> "FizzBuzzWoof"
-            fizz(n) && woof(n)            -> "FizzWoof"
-            fizz(n) && buzz(n)            -> "FizzBuzz"
-            buzz(n) && woof(n)            -> "BuzzWoof"
-            fizz(n)                       -> "Fizz"
-            buzz(n)                       -> "Buzz"
-            woof(n)                       -> "Woof"
-            else                          -> n.toString()
-        }
-
-    private fun woof(n: Int) = n.rem(7) == 0
-
-    private fun buzz(n: Int) = n.rem(5) == 0
-
-    private fun fizz(n: Int) = n.rem(3) == 0
 }
 
+fun fizzBuzzWoof(n: Int): String =
+    when {
+        fizz(n) && buzz(n) && woof(n) -> "FizzBuzzWoof"
+        fizz(n) && woof(n)            -> "FizzWoof"
+        fizz(n) && buzz(n)            -> "FizzBuzz"
+        buzz(n) && woof(n)            -> "BuzzWoof"
+        fizz(n)                       -> "Fizz"
+        buzz(n)                       -> "Buzz"
+        woof(n)                       -> "Woof"
+        else                          -> n.toString()
+    }
 
+private fun fizz(n: Int) = n.rem(3) == 0
+private fun buzz(n: Int) = n.rem(5) == 0
+private fun woof(n: Int) = n.rem(7) == 0
 
 
 
