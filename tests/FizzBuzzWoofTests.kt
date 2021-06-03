@@ -22,13 +22,12 @@ class FizzBuzzWoofTests {
     }
 }
 
-fun fizz(n: Int) = if (n.rem(3) == 0) "Fizz" else ""
-fun buzz(n: Int) = if (n.rem(5) == 0) "Buzz" else ""
-fun woof(n: Int) = if (n.rem(7) == 0) "Woof" else ""
-
 fun fizzBuzzWoof(n: Int): String =
     (fizz(n) + buzz(n) + woof(n)).ifEmpty { n.toString() }
 
+fun fizz(n: Int) = if (n.rem(3) == 0) "Fizz" else ""
+fun buzz(n: Int) = if (n.rem(5) == 0) "Buzz" else ""
+fun woof(n: Int) = if (n.rem(7) == 0) "Woof" else ""
 
 
 
