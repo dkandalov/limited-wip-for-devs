@@ -24,9 +24,9 @@ class FizzBuzzWoofTests {
     private fun fizzBuzzWoof(n: Int): String =
         when {
             n.rem(3) == 0 && n.rem(5) == 0 && n.rem(7) == 0 -> "FizzBuzzWoof"
-            n.rem(5) == 0 && n.rem(7) == 0                  -> "BuzzWoof"
             n.rem(3) == 0 && n.rem(7) == 0                  -> "FizzWoof"
             n.rem(3) == 0 && n.rem(5) == 0                  -> "FizzBuzz"
+            n.rem(5) == 0 && n.rem(7) == 0                  -> "BuzzWoof"
             n.rem(3) == 0                                   -> "Fizz"
             n.rem(5) == 0                                   -> "Buzz"
             n.rem(7) == 0                                   -> "Woof"
