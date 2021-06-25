@@ -22,7 +22,7 @@ class FizzBuzzWoofTests {
 }
 
 fun fizzBuzzWoof(n: Int): String =
-    ("") +
+    (if (fizz(n)) "" else "") +
     when {
         fizz(n) && buzz(n) && woof(n) -> "FizzBuzzWoof"
         buzz(n) && woof(n)            -> "BuzzWoof"
