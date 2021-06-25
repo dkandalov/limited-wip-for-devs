@@ -21,10 +21,11 @@ class FizzBuzzWoofTests {
     }
 }
 
-fun fizzBuzzWoof(n: Int): String =
+fun fizzBuzzWoof(n: Int): String = (
     (if (fizz(n)) "Fizz" else "") +
     (if (buzz(n)) "Buzz" else "") +
-    (if (woof(n)) "Woof" else "") +
+    (if (woof(n)) "Woof" else "")
+).ifEmpty { "" } +
     when {
         fizz(n) && buzz(n) && woof(n) -> ""
         buzz(n) && woof(n)            -> ""
