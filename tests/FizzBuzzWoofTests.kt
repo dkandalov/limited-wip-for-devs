@@ -21,16 +21,18 @@ class FizzBuzzWoofTests {
     }
 }
 
-fun fizzBuzzWoof(n: Int): String = when {
-    fizz(n) && buzz(n) && woof(n) -> "FizzBuzzWoof"
-    buzz(n) && woof(n)            -> "BuzzWoof"
-    fizz(n) && woof(n)            -> "FizzWoof"
-    fizz(n) && buzz(n)            -> "FizzBuzz"
-    fizz(n)                       -> "Fizz"
-    buzz(n)                       -> "Buzz"
-    woof(n)                       -> "Woof"
-    else                          -> n.toString()
-}
+fun fizzBuzzWoof(n: Int): String =
+    ("") +
+    when {
+        fizz(n) && buzz(n) && woof(n) -> "FizzBuzzWoof"
+        buzz(n) && woof(n)            -> "BuzzWoof"
+        fizz(n) && woof(n)            -> "FizzWoof"
+        fizz(n) && buzz(n)            -> "FizzBuzz"
+        fizz(n)                       -> "Fizz"
+        buzz(n)                       -> "Buzz"
+        woof(n)                       -> "Woof"
+        else                          -> n.toString()
+    }
 
 private fun fizz(n: Int) = n.rem(3) == 0
 private fun buzz(n: Int) = n.rem(5) == 0
