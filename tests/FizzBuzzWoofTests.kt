@@ -23,14 +23,16 @@ class FizzBuzzWoofTests {
 
 fun fizzBuzzWoof(n: Int): String =
     (if (fizz(n)) "Fizz" else "") +
+    (if (buzz(n)) "Buzz" else "") +
+    (if (woof(n)) "Woof" else "") +
     when {
-        fizz(n) && buzz(n) && woof(n) -> "BuzzWoof"
-        buzz(n) && woof(n)            -> "BuzzWoof"
-        fizz(n) && woof(n)            -> "Woof"
-        fizz(n) && buzz(n)            -> "Buzz"
+        fizz(n) && buzz(n) && woof(n) -> ""
+        buzz(n) && woof(n)            -> ""
+        fizz(n) && woof(n)            -> ""
+        fizz(n) && buzz(n)            -> ""
         fizz(n)                       -> ""
-        buzz(n)                       -> "Buzz"
-        woof(n)                       -> "Woof"
+        buzz(n)                       -> ""
+        woof(n)                       -> ""
         else                          -> n.toString()
     }
 
