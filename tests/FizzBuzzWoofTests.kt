@@ -16,6 +16,9 @@ class FizzBuzzWoofTests {
         fizzBuzzWoof(10) shouldEqual "Buzz"
         fizzBuzzWoof(11) shouldEqual "11"
         fizzBuzzWoof(15) shouldEqual "FizzBuzz"
+        fizzBuzzWoof(3 * 7) shouldEqual "FizzWoof"
+        fizzBuzzWoof(5 * 7) shouldEqual "BuzzWoof"
+        fizzBuzzWoof(3 * 5 * 7) shouldEqual "FizzBuzzWoof"
     }
 
     private fun fizzBuzzWoof(n: Int): String {
