@@ -1,4 +1,3 @@
-
 import datsok.shouldEqual
 import org.junit.jupiter.api.Test
 
@@ -23,15 +22,19 @@ class FizzBuzzWoofTests {
 }
 
 fun fizzBuzzWoof(n: Int): String = when {
-    n.rem(3) == 0 && n.rem(5) == 0 && n.rem(7) == 0 -> "FizzBuzzWoof"
-    n.rem(5) == 0 && n.rem(7) == 0                  -> "BuzzWoof"
-    n.rem(3) == 0 && n.rem(7) == 0                  -> "FizzWoof"
-    n.rem(3) == 0 && n.rem(5) == 0                  -> "FizzBuzz"
-    n.rem(3) == 0                                   -> "Fizz"
-    n.rem(5) == 0                                   -> "Buzz"
-    n.rem(7) == 0                                   -> "Woof"
-    else                                            -> n.toString()
+    fizz(n) && buzz(n) && woof(n) -> "FizzBuzzWoof"
+    buzz(n) && woof(n)            -> "BuzzWoof"
+    fizz(n) && woof(n)            -> "FizzWoof"
+    fizz(n) && buzz(n)            -> "FizzBuzz"
+    fizz(n)                       -> "Fizz"
+    buzz(n)                       -> "Buzz"
+    woof(n)                       -> "Woof"
+    else                          -> n.toString()
 }
+
+private fun fizz(n: Int) = n.rem(3) == 0
+private fun buzz(n: Int) = n.rem(5) == 0
+private fun woof(n: Int) = n.rem(7) == 0
 
 
 
