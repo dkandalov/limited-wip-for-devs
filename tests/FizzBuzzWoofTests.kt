@@ -22,6 +22,8 @@ class FizzBuzzWoofTests {
     }
 }
 
+fun fizz(n: Int) = if (n.rem(3) == 0) "Fizz" else ""
+
 fun fizzBuzzWoof(n: Int): String =
     when {
         n.rem(3) == 0 && n.rem(5) == 0 && n.rem(7) == 0 -> "FizzBuzzWoof"
