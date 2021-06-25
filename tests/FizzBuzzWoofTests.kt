@@ -25,7 +25,7 @@ fun fizzBuzzWoof(n: Int): String = (
     (if (fizz(n)) "Fizz" else "") +
     (if (buzz(n)) "Buzz" else "") +
     (if (woof(n)) "Woof" else "")
-).ifEmpty { "" } +
+).ifEmpty { n.toString() } +
     when {
         fizz(n) && buzz(n) && woof(n) -> ""
         buzz(n) && woof(n)            -> ""
@@ -34,7 +34,7 @@ fun fizzBuzzWoof(n: Int): String = (
         fizz(n)                       -> ""
         buzz(n)                       -> ""
         woof(n)                       -> ""
-        else                          -> n.toString()
+        else                          -> ""
     }
 
 private fun fizz(n: Int) = n.rem(3) == 0
